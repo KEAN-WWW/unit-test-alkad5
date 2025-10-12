@@ -1,0 +1,29 @@
+from flask import Blueprint
+from.app.routers.user_routes import route_bp
+
+def init_app(): 2 usages
+"""Intialize the core application. """
+
+# Create a blueprint instance
+app=Flask (__name__, instance_relative)
+user_bp = Blueprint('user', __name__)
+
+@user_bp.route('/users')
+def get_users():
+    return {"message": "List of users"}
+from flask import Flask
+from app.routes.user_routes import user_bp  # Import blueprint
+
+def create_app():
+    app = Flask(__name__)
+    
+    # Register blueprint
+    app.register_blueprint(user_bp, url_prefix='/api')
+    
+    return app
+from application.app import init_app
+
+app = init_app()
+
+if __name__ == '__main__':
+    app.run(debug=True)
