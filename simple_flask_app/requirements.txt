@@ -1,4 +1,2 @@
-Flask
 pytest
-pytest-pylint
 pylint
