@@ -1,2 +1,7 @@
+import pytest
+from src.calculator import Calculator
+
+calc = Calculator()
+
 def test_multiplication():
-    pass
+    assert calc.mul(6, 4) == 24

@@ -5,5 +5,5 @@ calc = Calculator()
 
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
-        calc.div(5, 0)
+        calc.div(7, 0)
 
