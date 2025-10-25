@@ -1,13 +1,6 @@
-def add(a, b):
-    return a + b
+"""Re-export functions from calculator for convenience/back-compat."""
+from .calculator import add, sub, mul, div
 
-def sub(a, b):
-    return a - b
+__all__ = ["add", "sub", "mul", "div"]
 
-def mul(a, b):
-    return a * b
 
-def div(a, b):
-    if b == 0:
-        raise ZeroDivisionError("Cannot divide by zero")
-    return a / b

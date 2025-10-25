@@ -1,7 +1,8 @@
-from src.calculator import Calculator
-
-calc = Calculator()
+from src.calculator import sub
 
 def test_subtraction():
-    assert calc.sub(6, 2) == 4
-    assert calc.sub(2, 5) == -3
+    assert sub(5, 3) == 2
+    assert sub(0, 5) == -5
+    assert sub(-1, -1) == 0
+
+

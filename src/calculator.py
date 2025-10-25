@@ -1,16 +1,21 @@
+"""Basic arithmetic functions used by unit tests."""
 
-from src.calculator import add, sub, mul, div
+def add(num_a: float, num_b: float) -> float:
+    """Return the sum of two numbers."""
+    return num_a + num_b
 
-class Calculator:
-    def add(self, a, b):
-        return add(a, b)
+def sub(num_a: float, num_b: float) -> float:
+    """Return the difference num_a - num_b."""
+    return num_a - num_b
 
-    def subtract(self, a, b):
-        return sub(a, b)
+def mul(num_a: float, num_b: float) -> float:
+    """Return the product of two numbers."""
+    return num_a * num_b
 
-    def multiply(self, a, b):
-        return mul(a, b)
+def div(num_a: float, num_b: float) -> float:
+    """Return the quotient num_a / num_b; raise on divide-by-zero."""
+    if num_b == 0:
+        raise ZeroDivisionError("division by zero")
+    return num_a / num_b
 
-    def divide(self, a, b):
-        return div(a, b)
 

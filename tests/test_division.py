@@ -1,9 +1,11 @@
+from src.calculator import div
 import pytest
-from src.calculator import Calculator
 
-calc = Calculator()
+def test_division():
+    assert div(6, 2) == 3
+    assert div(-10, 5) == -2
 
-def test_divide_by_zero():
+def test_division_by_zero():
     with pytest.raises(ZeroDivisionError):
-        calc.div(7, 0)
+        div(5, 0)
 
