@@ -5,3 +5,4 @@ def test_multiplication():
     assert mul(0, 100) == 0
     assert mul(-2, 3) == -6
 
+
